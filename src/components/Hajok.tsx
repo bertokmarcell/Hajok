@@ -1,18 +1,16 @@
-import Hajo from "./Hajo.tsx";
-import { HAJOLISTA } from "./adat.tsx";
-interface Hajoprops{
-    lista:HajoTipus[]
+import Hajo from './Hajo'
+import { type HajoTipus } from './adat'
+
+interface Hajoprops {
+  lista: HajoTipus[]
 }
 
-export default function Hajok({lista}:Hajoprops){
-    return (
-        <>
-        {
-            lista.map((e,i)=>{
-                return <Hajo hajom={e} key={i} index ={i} />
-            })
-        }
-        
-        </>
-    )
+export default function Hajok({ lista }: Hajoprops) {
+  return (
+    <>
+      {lista.map((e, i) => (
+        <Hajo hajom={e} key={i} />
+      ))}
+    </>
+  )
 }
